@@ -9,7 +9,6 @@ CREATE TABLE users (
     password VARCHAR(50) NOT NULL,
     description VARCHAR(100) NOT NULL
 );
--- I verkligheten skulle man inte lagra lösenord i "klartext" på detta sätt, mer om detta senare i kursen, men vi håller exemplet enkelt.
 
 -- Testanvändare
 INSERT INTO users (username, password, description)
@@ -17,6 +16,7 @@ VALUES
     ('alice', 'katt123', 'Administratör med ansvar för servern'),
     ('bob',   'hund456', 'Vanlig användare som gillar katter'),
     ('carol', 'fisk789', 'Kurssamordnare, jobbar på distans');
+-- I verkligheten skulle man inte lagra lösenord i "klartext" på detta sätt, mer om detta senare i kursen, men vi håller exemplet enkelt.
 """
 from flask import Flask, session, redirect, url_for, request
 import mysql.connector
